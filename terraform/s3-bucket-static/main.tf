@@ -10,8 +10,8 @@ resource "aws_s3_bucket" "static_site_bucket" {
   bucket = "static-site-${var.bucket_name}"
 
   website {
-    index_document = "index.html"
-    error_document = "error.html"
+    index_document = "/src/index.html"
+    error_document = "/src/404.html"
   }
 
   tags = {
